@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Alexander Borisov
+ * Copyright (C) 2024 Alexander Borisov
  *
  * Author: Alexander Borisov <borisov@lexbor.com>
  */
@@ -16,6 +16,9 @@
 
 #include "lexbor/core/shs.h"
 #include "lexbor/css/at_rule/const.h"
+#if __has_include("lexbor/css/at_rule/state.h")
+    #include "lexbor/css/at_rule/state.h"
+#endif
 
 
 static const lxb_css_entry_data_t lxb_css_at_rule_data[LXB_CSS_AT_RULE__LAST_ENTRY] = 

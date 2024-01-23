@@ -15,7 +15,10 @@
 #define LXB_CSS_%%PREFIX%%_RES_H
 
 #include "lexbor/core/shs.h"
-#include "%%HEADER%%"
+#include "%%CONST_HEADER%%"
+#if __has_include("%%STATE_HEADER%%")
+    #include "%%STATE_HEADER%%"
+#endif
 
 
 %%SHS_DATA%%

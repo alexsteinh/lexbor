@@ -569,7 +569,8 @@ class Pseudo:
 
         const_save_to = "{}/const.h".format(path)
         res_save_to = "{}/res.h".format(path)
-        header = "lexbor/css/{}/const.h".format(prefix)
+        const_header = "lexbor/css/{}/const.h".format(prefix)
+        state_header = "lexbor/css/{}/state.h".format(prefix)
 
         if os.path.isdir(path) == False:
             os.mkdir(path, 0o755)
@@ -596,7 +597,8 @@ class Pseudo:
 
         lxb_temp.pattern_append("%%YEAR%%", str(now.year))
         lxb_temp.pattern_append("%%PREFIX%%", prefix.upper())
-        lxb_temp.pattern_append("%%HEADER%%", header.lower())
+        lxb_temp.pattern_append("%%CONST_HEADER%%", const_header.lower())
+        lxb_temp.pattern_append("%%STATE_HEADER%%", state_header.lower())
         lxb_temp.pattern_append("%%SHS_DATA%%", ''.join(res[1]))
         lxb_temp.pattern_append("%%SHS%%", ''.join(res[2]))
 

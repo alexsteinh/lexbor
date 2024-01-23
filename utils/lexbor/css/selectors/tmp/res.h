@@ -16,6 +16,7 @@
 
 #include "lexbor/core/shs.h"
 #include "lexbor/css/selectors/pseudo_const.h"
+#include "lexbor/css/selectors/pseudo_state.h"
 
 
 %%SHS_DATA%%

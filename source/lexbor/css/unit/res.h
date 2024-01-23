@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Alexander Borisov
+ * Copyright (C) 2024 Alexander Borisov
  *
  * Author: Alexander Borisov <borisov@lexbor.com>
  */
@@ -16,6 +16,9 @@
 
 #include "lexbor/core/shs.h"
 #include "lexbor/css/unit/const.h"
+#if __has_include("lexbor/css/unit/state.h")
+    #include "lexbor/css/unit/state.h"
+#endif
 
 
 static const lxb_css_data_t lxb_css_unit_data[LXB_CSS_UNIT__LAST_ENTRY] = 
